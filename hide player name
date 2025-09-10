@@ -1,0 +1,8 @@
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(char)
+        local humanoid = char:WaitForChild("Humanoid")
+        humanoid.NameDisplayDistance = 0  -- sembunyikan username bawaan
+    end)
+end)
